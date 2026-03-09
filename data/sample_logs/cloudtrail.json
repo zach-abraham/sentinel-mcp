@@ -1,0 +1,243 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-07T10:00:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.1.50",
+      "userAgent": "Mozilla/5.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/admin-jsmith",
+        "userName": "admin-jsmith"
+      },
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      }
+    },
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-07T14:30:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.1.50",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/admin-jsmith",
+        "userName": "admin-jsmith"
+      },
+      "requestParameters": {
+        "bucketName": "company-reports",
+        "key": "quarterly-report-q4-2025.pdf"
+      },
+      "responseElements": null
+    },
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-08T02:30:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateUser",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/deploy",
+        "userName": "deploy"
+      },
+      "requestParameters": {
+        "userName": "svc-automation"
+      },
+      "responseElements": {
+        "user": {
+          "userName": "svc-automation",
+          "userId": "AIDAEXAMPLE123456",
+          "arn": "arn:aws:iam::123456789012:user/svc-automation",
+          "createDate": "2026-03-08T02:30:00Z"
+        }
+      }
+    },
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-08T02:30:30Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/deploy",
+        "userName": "deploy"
+      },
+      "requestParameters": {
+        "userName": "svc-automation"
+      },
+      "responseElements": {
+        "accessKey": {
+          "accessKeyId": "AKIAEXAMPLE123456",
+          "status": "Active",
+          "userName": "svc-automation"
+        }
+      }
+    },
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-08T02:31:00Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/deploy",
+        "userName": "deploy"
+      },
+      "requestParameters": {
+        "userName": "svc-automation",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null
+    },
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-08T02:32:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "PutBucketPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/svc-automation",
+        "userName": "svc-automation"
+      },
+      "requestParameters": {
+        "bucketName": "company-data-backup",
+        "bucketPolicy": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": "*",
+              "Action": "s3:GetObject",
+              "Resource": "arn:aws:s3:::company-data-backup/*"
+            }
+          ]
+        }
+      },
+      "responseElements": null
+    },
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-08T02:33:00Z",
+      "eventSource": "cloudtrail.amazonaws.com",
+      "eventName": "StopLogging",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/svc-automation",
+        "userName": "svc-automation"
+      },
+      "requestParameters": {
+        "name": "management-trail"
+      },
+      "responseElements": null
+    },
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-08T02:34:00Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "AuthorizeSecurityGroupIngress",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/svc-automation",
+        "userName": "svc-automation"
+      },
+      "requestParameters": {
+        "groupId": "sg-0123456789abcdef0",
+        "ipPermissions": {
+          "items": [
+            {
+              "ipProtocol": "tcp",
+              "fromPort": 0,
+              "toPort": 65535,
+              "ipRanges": {
+                "items": [
+                  {
+                    "cidrIp": "0.0.0.0/0"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "responseElements": null
+    },
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-08T02:35:00Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/svc-automation",
+        "userName": "svc-automation"
+      },
+      "requestParameters": {
+        "bucketName": "company-data-backup",
+        "key": "database-dump-20260307.sql.gz"
+      },
+      "responseElements": null
+    },
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-08T02:36:00Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "GetCallerIdentity",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.23",
+      "userAgent": "aws-cli/2.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/svc-automation",
+        "userName": "svc-automation"
+      },
+      "requestParameters": null,
+      "responseElements": null
+    },
+    {
+      "eventVersion": "1.08",
+      "eventTime": "2026-03-08T08:00:00Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "10.0.1.50",
+      "userAgent": "Mozilla/5.0",
+      "userIdentity": {
+        "type": "IAMUser",
+        "arn": "arn:aws:iam::123456789012:user/admin-jsmith",
+        "userName": "admin-jsmith"
+      },
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      }
+    }
+  ]
+}

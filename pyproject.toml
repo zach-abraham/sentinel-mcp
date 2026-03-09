@@ -1,0 +1,17 @@
+[project]
+name = "sentinel-mcp"
+version = "0.1.0"
+description = "AI SOC Analyst - MCP server for autonomous security operations"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "scikit-learn>=1.3.0",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+sentinel-mcp = "sentinel_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

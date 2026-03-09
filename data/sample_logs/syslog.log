@@ -1,0 +1,25 @@
+Mar  7 08:00:00 webserver01 systemd[1]: Started Daily apt download activities.
+Mar  7 08:00:01 webserver01 systemd[1]: Started OpenBSD Secure Shell server.
+Mar  7 08:15:00 webserver01 CRON[12345]: (root) CMD (/usr/bin/logrotate /etc/logrotate.conf)
+Mar  7 09:00:00 webserver01 systemd[1]: Started Nginx HTTP Server.
+Mar  7 09:00:01 webserver01 nginx[13000]: 10.0.1.50 - - [07/Mar/2026:09:00:01] "GET / HTTP/1.1" 200 612
+Mar  7 10:00:00 webserver01 CRON[15200]: (www-data) CMD (/usr/bin/php /var/www/app/artisan schedule:run)
+Mar  7 12:00:00 webserver01 systemd[1]: Started Daily Cleanup of Temporary Directories.
+Mar  7 14:00:00 webserver01 kernel: [42000.123456] TCP: request_sock_TCP: Possible SYN flooding on port 80. Sending cookies.
+Mar  7 14:00:01 webserver01 kernel: [42000.234567] nf_conntrack: table full, dropping packet.
+Mar  7 15:00:00 webserver01 systemd[1]: Started Unattended Upgrades Shutdown.
+Mar  7 17:00:00 webserver01 CRON[17100]: (root) CMD (/usr/bin/certbot renew --quiet)
+Mar  7 18:00:00 webserver01 systemd[1]: Stopped Daily Cleanup of Temporary Directories.
+Mar  8 02:17:30 webserver01 systemd[1]: Stopped Fail2Ban Service.
+Mar  8 02:17:31 webserver01 systemd[1]: Stopping Fail2Ban Service.
+Mar  8 02:18:10 webserver01 systemd[1]: Stopped rsyslog.
+Mar  8 02:18:11 webserver01 systemd[1]: Stopping System Logging Service.
+Mar  8 02:19:00 webserver01 CRON[20250]: (root) CMD (REPLACE (svc_backup))
+Mar  8 02:19:01 webserver01 crontab[20251]: (svc_backup) REPLACE (svc_backup)
+Mar  8 02:24:05 webserver01 kernel: [48000.567890] audit: type=1400 msg=audit(1709859845.567:890): operation="exec" comm="bash" name="/tmp/tools/nc" pid=20600
+Mar  8 02:24:06 webserver01 webserver01 ncat[20600]: Connection from 198.51.100.23:4444
+Mar  8 02:24:10 webserver01 kernel: [48005.123456] audit: type=1400 msg=audit(1709859850.123:891): operation="exec" comm="nc" name="/dev/shm/payload" pid=20601
+Mar  8 02:30:00 webserver01 webserver01 sshd[20700]: error: Received disconnect from 10.0.1.50 port 53100:11: disconnected by user
+Mar  8 06:00:00 webserver01 CRON[20800]: (root) CMD (/usr/bin/logrotate /etc/logrotate.conf)
+Mar  8 08:00:00 webserver01 systemd[1]: Started OpenBSD Secure Shell server.
+Mar  8 08:15:01 webserver01 systemd[1]: Started Nginx HTTP Server.
