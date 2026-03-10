@@ -29,7 +29,7 @@ An MCP (Model Context Protocol) server that gives Claude the ability to ingest s
 ### Install
 
 ```bash
-git clone https://github.com/yourusername/sentinel-mcp.git
+git clone https://github.com/zach-abraham/sentinel-mcp.git
 cd sentinel-mcp
 python3 -m venv .venv
 source .venv/bin/activate
